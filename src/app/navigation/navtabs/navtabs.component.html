@@ -1,13 +1,45 @@
-<div class="navtabs-container">
+<div class="navtabs-container" fxFlex fxLayout="row" fxLayoutAlign="center center">
     <nav mat-tab-nav-bar>
-        <span class="toolbar-flex"></span>
+        <a mat-tab-link 
+         routerLink="/"
+         routerLinkActive #home="routerLinkActive"
+         [active]="home.isActive">
+         Home
+        </a>
+        <a mat-tab-link 
+         routerLink="/accomodation"
+         routerLinkActive #home="routerLinkActive"
+         [active]="home.isActive">
+         Accomodation
+        </a>
+        <a mat-tab-link 
+         routerLink="/food-and-beverage"
+         routerLinkActive #home="routerLinkActive"
+         [active]="home.isActive">
+         Food &amp; Beverage
+        </a>
+        <a mat-tab-link 
+         routerLink="/lifestyle"
+         routerLinkActive #lifestyle="routerLinkActive"
+         [active]="home.isActive">
+         Lifestyle
+        </a>
+        <a mat-tab-link 
+         routerLink="/offers"
+         routerLinkActive #offers="routerLinkActive"
+         [active]="offers.isActive">
+         Offers
+        </a>
+        <!-- <span class="toolbar-flex"></span>
         <mat-tab-group>
-            <mat-tab label="Hello 1"></mat-tab>
+            <mat-tab label="Hello 1">
+                <app-home></app-home>
+            </mat-tab>
             <mat-tab label="Hello 2"></mat-tab>
             <mat-tab label="Hello 3"></mat-tab>
             <mat-tab label="Hello 4"></mat-tab>
             <mat-tab label="Hello 5"></mat-tab>
-        </mat-tab-group>
-        <span class="toolbar-flex"></span>
+        </mat-tab-group> -->
+        <!-- <span class="toolbar-flex"></span> -->
     </nav>
 </div>

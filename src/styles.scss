@@ -1,35 +1,117 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
-// Plus imports for other components in your app.
+@import './app/navigation/navtabs/navtabs.component.scss';
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat-core();
+$my-primary: (
+    50 : #f6fbfb,
+    100 : #e8f5f4,
+    200 : #d9efed,
+    300 : #c9e9e6,
+    400 : #bee4e0,
+    500 : #b2dfdb,
+    600 : #abdbd7,
+    700 : #a2d7d2,
+    800 : #99d2cd,
+    900 : #8acac4,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #f6fffe,
+    A700 : #dcfffc,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$my-hotel-primary: mat-palette($mat-teal, 200);
-$my-hotel-accent: mat-palette($mat-teal, 50);
+$my-accent: (
+    50 : #fffefb,
+    100 : #fffdf6,
+    200 : #fffcf0,
+    300 : #fffaea,
+    400 : #fff9e6,
+    500 : #fff8e1,
+    600 : #fff7dd,
+    700 : #fff6d9,
+    800 : #fff5d5,
+    900 : #fff3cd,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
 
-// The warn palette is optional (defaults to red).
+$my-typography: mat-typography-config(
+  $font-family:   'Rubik, sans-serif',
+  $display-4:     mat-typography-level(56px, 56px, 300, $letter-spacing: -0.05em),
+  $display-3:     mat-typography-level(28px, 56px, 400, $letter-spacing: -0.02em),
+  $display-2:     mat-typography-level(22px, 48px, 400, $letter-spacing: -0.005em),
+  $display-1:     mat-typography-level(18px, 40px, 400),
+  $headline:      mat-typography-level(48px, 40px, 400),
+  $title:         mat-typography-level(30px, 32px, 500),
+  $subheading-2:  mat-typography-level(24px, 0.25px, 400),
+  $subheading-1:  mat-typography-level(24px, 0.25px, 400),
+  $body-2:        mat-typography-level(14px, 0.25px, 500),
+  $body-1:        mat-typography-level(16px, 0.5px, 400),
+  $caption:       mat-typography-level(12px, 1.25px, 400),
+  $button:        mat-typography-level(14px, 1.25px, 500),
+  // Line-height must be unit-less fraction of the font-size.
+  $input:         mat-typography-level(inherit, 1.125, 400)
+);
+
+@include mat-base-typography($my-typography);
+@include mat-checkbox-typography($my-typography);
+@include angular-material-typography($my-typography);
+
+$my-hotel-primary: mat-palette($my-primary, 700, 300, 900);
+$my-hotel-accent: mat-palette($my-accent, 500, 400, 700);
 $my-hotel-warn: mat-palette($mat-red);
-
-// Create the theme object (a Sass map containing all of the palettes).
 $my-hotel-theme: mat-light-theme($my-hotel-primary, $my-hotel-accent, $my-hotel-warn);
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
+@include mat-core();
 @include angular-material-theme($my-hotel-theme);
+@include navtabs-component-theme($my-hotel-theme);
 
-/* You can add global styles to this file, and also import other style files */
+
+/*Global styles*/
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-.navtabs-container {
-    background: mat-color($my-hotel-accent);
+
+.mat-list-option:hover, 
+.mat-list-option:focus, 
+.mat-nav-list .mat-list-item:hover, 
+.mat-nav-list .mat-list-item:focus, 
+.mat-action-list .mat-list-item:hover, 
+.mat-action-list .mat-list-item:focus {
+    background-color: mat-color($my-primary, 300);
+    color: mat-color($my-primary, 900);
 }
+
+@include mat-core($my-typography);
