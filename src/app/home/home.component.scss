@@ -1,17 +1,138 @@
-.container {
-    height: 100vh;
-    background: url(/assets/images/home_beach.jpeg) no-repeat;
+.hero-container {
+    background: url(/assets/images/home_beach.jpeg) center center no-repeat;
     background-size: cover;
 }
 .book-now-container {
     padding: 35px 115px 0 0;
 }
 .book-now-button {
-    wodth: 170px;
+    width: 170px;
     color: #fff;
     border: 1px solid #fff;
     text-transform: uppercase;
+    border-radius: 4px;
 }
-// .header-container {
-//     height: 100vh;
-// }
+.header-container {
+    padding: 60px 20px;
+    text-align: center;
+}
+.header-container .mat-display-4 {
+    color: #fff;
+    max-width: 600px;
+}
+.header-container .mat-display-1 {
+    margin: 10px;
+    max-width: 600px;
+}
+.thailand {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, 50%);
+}
+.thailand h3 {
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    background: url(/assets/images/thailand_text_background.jpeg) repeat;
+    background-clip: text;
+    font-stretch: normal;
+    font-size: 130px;
+    letter-spacing: 0.09em;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: Rubik, sans-serif;
+    top: 50%;
+    left: 50%;
+}
+p {
+    text-align: center;
+    line-height: normal;
+}
+.rooms-home-display {
+    margin: 20px auto;
+}
+.rooms-suites {
+    background: url(/assets/images/beach-houses.jpeg) center center no-repeat;
+    background-size: cover;
+}
+.beach-houses {
+    background: url(/assets/images/restaurant.jpeg) center center no-repeat;
+    background-size: cover;
+}
+.rooms-suites, .beach-houses{
+    height: 600px;
+    width: 40%;
+}
+.food, .lifestyle {
+    width: 80%;
+}
+.pool-bar, .restaurant, .tapas-lounge {
+    height: 300px;
+    width: 25%;
+}
+.spa, .massage, .relax {
+    width: 25%;
+    height: 600px;
+}
+.spa mat-card-header, .massage mat-card-header, .relax mat-card-header {
+    height: 100px;
+}
+.spa img, .massage img, .relax img {
+    height: 300px;
+}
+.rooms-home-display mat-card-header, .food mat-card-header {
+    position: absolute;
+    top:25%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    height: 55px;
+    background: rgba(255, 248, 225, .6);
+}
+.rooms-home-display mat-card-header h2, .food mat-card-header h2  { 
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.rooms-home-display mat-card-actions, .food mat-card-actions {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pool-bar {
+    background: url(/assets/images/food1.jpg) center center no-repeat;
+    background-size: cover;
+}
+.restaurant {
+    background: url(/assets/images/food2.jpg) center center no-repeat;
+    background-size: cover;
+}
+.tapas-lounge {
+    background: url(/assets/images/food3.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+@media all and (max-width: 599px) {
+    .header-container .mat-display-1 {
+        font-size: 1.1rem;
+        line-height: 1.1;
+    }
+    .header-container .mat-display-4 {
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+}
+@media all and (max-width: 768px) {
+    .thailand,
+    .thailand h3 {
+        display: none;
+    }
+    .home-section {
+        padding-top: 80px;
+    }
+    mat-card.mat-card {
+        flex-basis: unset;
+        width: 80%;
+    }
+}
