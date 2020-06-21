@@ -1,17 +1,112 @@
-.container {
-    height: 100vh;
-    background: url(/assets/images/home_beach.jpeg) no-repeat;
+.hero-container {
+    background: url(/assets/images/home_beach.jpeg) center center no-repeat;
     background-size: cover;
+    // height: calc(100vh - 145px);
 }
 .book-now-container {
     padding: 35px 115px 0 0;
 }
 .book-now-button {
-    wodth: 170px;
+    width: 170px;
     color: #fff;
     border: 1px solid #fff;
     text-transform: uppercase;
+    border-radius: 4px;
 }
-// .header-container {
-//     height: 100vh;
+.header-container {
+    padding: 60px 20px;
+    text-align: center;
+}
+.header-container .mat-display-4 {
+    color: #fff;
+    max-width: 600px;
+}
+.header-container .mat-display-1 {
+    margin: 10px;
+    max-width: 600px;
+}
+.thailand {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, 50%);
+}
+.thailand h3 {
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    background: url(/assets/images/thailand_text_background.jpeg) repeat;
+    background-clip: text;
+    font-stretch: normal;
+    font-size: 130px;
+    letter-spacing: 0.09em;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: Rubik, sans-serif;
+    top: 50%;
+    left: 50%;
+}
+.home-section p {
+    text-align: center;
+    line-height: normal;
+}
+.rooms-suites {
+    background: url(/assets/images/beach-houses.jpeg) center center no-repeat;
+    background-size: cover;
+}
+.beach-houses {
+    background: url(/assets/images/restaurant.jpeg) center center no-repeat;
+    background-size: cover;
+}
+mat-card {
+    height: 600px;
+}
+mat-card-header {
+    position: absolute;
+    top:25%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    height: 55px;
+    background: rgba(255, 248, 225, .6);
+}
+mat-card-header h2 { 
+    text-transform: uppercase;
+    font-weight: 400;
+}
+mat-card-actions {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+// .rooms-home-display mat-card button {
+//     min-width: 140px;
+//     min-height: 40px;
 // }
+//Need fixes for background
+
+// @media all and (min-width: 768px) {
+//     .hero-container {
+//         height: 100vh;
+//     }
+// }
+@media all and (max-width: 599px) {
+    .header-container .mat-display-1 {
+        font-size: 1.1rem;
+        line-height: 1.1;
+    }
+    .header-container .mat-display-4 {
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+}
+@media all and (max-width: 768px) {
+    .thailand,
+    .thailand h3 {
+        display: none;
+    }
+    .home-section {
+        padding-top: 80px;
+    }
+}

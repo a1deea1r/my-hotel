@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'lifestyle', component: LifestyleComponent },
   { path: 'offers', component: OffersComponent },
   { path: 'signin', component: SigninComponent },
-  { path: 'singup', component: SignupComponent },
+  { path: 'signup', component: SignupComponent },
   { path: '', component: HomeComponent}
 ];
 
